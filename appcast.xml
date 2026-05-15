@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Sayz</title>
+        <link>https://zsyonyc.github.io/Sayz-site/appcast.xml</link>
+        <description>Sayz update feed</description>
+        <language>en</language>
+        <!--
+            Release entries are appended below by the Sayz release pipeline
+            once a notarized DMG ships. The Mac App Store build does not read
+            this feed; it uses the App Store's own update mechanism.
+        -->
+    </channel>
+</rss>
