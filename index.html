@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayz — Local dictation for macOS</title>
+    <meta name="description" content="Push-to-talk dictation for macOS. Hold a key, talk, release. 100% on-device. No cloud, no screen capture, no telemetry.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: #fff;
+        }
+        .hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, #f5f5f7 0%, #fff 100%);
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #0F172A 0%, #818CF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .lede {
+            font-size: 1.1rem;
+            color: #6e6e73;
+            max-width: 560px;
+            margin: 0 auto 32px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #f5f5f7;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            color: #6e6e73;
+            margin-bottom: 24px;
+        }
+        section { padding: 40px 0; }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+        ul { padding-left: 24px; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .privacy-card {
+            background: #f5f5f7;
+            padding: 24px 28px;
+            border-radius: 16px;
+            margin-top: 16px;
+        }
+        .privacy-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .footer {
+            padding: 40px 20px;
+            text-align: center;
+            color: #6e6e73;
+            font-size: 0.9rem;
+            border-top: 1px solid #d2d2d7;
+            margin-top: 40px;
+        }
+        .footer a { margin: 0 8px; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="badge">Free for v1 &middot; macOS 14+ &middot; Apple Silicon</div>
+            <h1>Sayz</h1>
+            <p class="tagline">Say it. It's typed.</p>
+            <p class="lede">Push-to-talk dictation for macOS. Hold a key, talk, release. 100% on-device via the Apple Neural Engine. No cloud, no screen capture, no telemetry.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <h2>What it does</h2>
+            <ul>
+                <li>Push-to-talk and toggle modes with a configurable global hotkey.</li>
+                <li>Transcription to clipboard and the Sayz Scratchpad window.</li>
+                <li>Custom vocabulary substitutions, applied before the text is inserted.</li>
+                <li>Three Whisper model sizes (Tiny / Base / Small) selectable in Settings.</li>
+                <li>The direct-distribution build can additionally insert text at the cursor via the macOS Accessibility API; the Mac App Store build is scratchpad + clipboard only.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Privacy</h2>
+            <div class="privacy-card">
+                <h3>Sayz never sends your voice anywhere.</h3>
+                <ul>
+                    <li>Audio is processed on-device using Apple's Neural Engine via WhisperKit (CoreML).</li>
+                    <li>No network calls during transcription.</li>
+                    <li>No screen capture. Sayz never inspects window contents.</li>
+                    <li>No telemetry, analytics, crash reporting, or usage data is collected.</li>
+                    <li>Sayz only contacts the network for two explicit reasons: downloading a Whisper model, and (outside the Mac App Store) checking for app updates.</li>
+                </ul>
+                <p style="margin-top: 16px; margin-bottom: 0;"><a href="privacy-policy.html">Read the full privacy policy &rarr;</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Requirements</h2>
+            <ul>
+                <li>macOS 14 (Sonoma) or later</li>
+                <li>Apple Silicon (M1 or newer)</li>
+                <li>About 250&nbsp;MB of disk space for the recommended Whisper model</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer">
+        &copy; 2026 Zach Schwartz
+        &middot;
+        <a href="privacy-policy.html">Privacy</a>
+        &middot;
+        <a href="support.html">Support</a>
+        &middot;
+        <a href="mailto:zschwartz96@outlook.com">Contact</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayz — Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #fff;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .updated {
+            color: #6e6e73;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lead {
+            font-size: 1.05rem;
+            padding: 16px 20px;
+            background: #f5f5f7;
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.9em;
+            background: #f5f5f7;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #d2d2d7;
+            color: #6e6e73;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sayz Privacy Policy</h1>
+        <p class="updated">Effective: May 11, 2026</p>
+
+        <p class="lead">Sayz is a local-first dictation utility for macOS. The short version: <strong>your voice never leaves your Mac.</strong></p>
+
+        <h2>What Sayz processes</h2>
+        <ul>
+            <li><strong>Audio.</strong> When you hold the global hotkey, Sayz captures audio at 16 kHz mono via AVAudioEngine and transcribes it on-device using WhisperKit (CoreML on the Apple Neural Engine). The audio buffer is kept in memory for the duration of the transcription and discarded immediately afterward. It is never written to disk and never sent over the network.</li>
+            <li><strong>Transcribed text.</strong> The transcription is placed on your clipboard and shown in the Sayz Scratchpad window so you can paste it where you want with &#8984;V. If you installed Sayz outside the Mac App Store, the transcription can also be inserted directly into the focused text field of the frontmost app via the macOS Accessibility API (you'll be prompted for the permission, and you can revoke it any time in System Settings). The Mac App Store build does not request Accessibility access and does not insert text into other apps' windows. Sayz does not retain a copy of inserted transcriptions.</li>
+        </ul>
+
+        <h2>What Sayz does <em>not</em> do</h2>
+        <ul>
+            <li><strong>No cloud transcription.</strong> All transcription is performed locally. Sayz does not contact any speech-to-text service.</li>
+            <li><strong>No screen capture.</strong> Sayz never reads or inspects window contents. In the direct-distribution build, the optional Accessibility API access is scoped to writing the focused text field of the frontmost app. The Mac App Store build does not request Accessibility access at all.</li>
+            <li><strong>No telemetry.</strong> Sayz does not collect analytics, usage statistics, crash reports, or any other diagnostic data.</li>
+            <li><strong>No account.</strong> Sayz does not require sign-in, account creation, or registration.</li>
+            <li><strong>No advertising.</strong> Sayz contains no advertising and no advertising identifiers.</li>
+            <li><strong>No third-party SDKs that contact the network.</strong> The only third-party libraries are WhisperKit, swift-transformers, Sparkle 2, and a small set of Swift stdlib extensions &mdash; none of which contact a network endpoint without explicit user action.</li>
+        </ul>
+
+        <h2>When Sayz does contact the network</h2>
+        <p>Sayz only contacts the network for two purposes, both visible to you in <strong>Settings &rarr; Privacy</strong>:</p>
+        <ul>
+            <li><strong>Model download.</strong> The first time you select a Whisper model, the model files are downloaded from Hugging Face (<code>huggingface.co/argmaxinc/whisperkit-coreml</code>). Each LFS file's SHA-256 is recomputed locally and verified against the manifest published by Hugging Face. Any mismatch deletes the model and surfaces an error.</li>
+            <li><strong>Update check.</strong> If you installed Sayz outside the Mac App Store, the bundled updater (Sparkle) periodically fetches the appcast at <code>https://zsyonyc.github.io/Sayz-site/appcast.xml</code> to check for new versions. You can disable this in <strong>Settings &rarr; About</strong>. Mac App Store builds use the App Store's own update mechanism instead and never fetch this URL.</li>
+        </ul>
+        <p>No other network connections are made by Sayz under any circumstances.</p>
+
+        <h2>Logs</h2>
+        <p>Diagnostic logs are written locally to <code>~/Library/Application Support/Sayz/Logs/</code> and are <strong>never auto-uploaded</strong>. <strong>Settings &rarr; Diagnostics &rarr; Copy Logs</strong> copies them to your clipboard if you want to share them when reporting an issue.</p>
+
+        <h2>Data sharing</h2>
+        <p>Sayz does not collect personal data. There is nothing to share, sell, or hand to a third party.</p>
+
+        <h2>Children</h2>
+        <p>Sayz is a productivity utility and is not directed at children under 13. It does not knowingly collect any data from any user, including children.</p>
+
+        <h2>Contact</h2>
+        <p>Questions or concerns: <a href="mailto:zschwartz96@outlook.com">zschwartz96@outlook.com</a>.</p>
+
+        <h2>Changes</h2>
+        <p>If this policy changes, the change will be reflected here with an updated effective date.</p>
+
+        <div class="footer">
+            &copy; 2026 Zach Schwartz. Sayz is a macOS dictation utility.
+        </div>
+    </div>
+</body>
+</html>

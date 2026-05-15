@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayz — Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #fff;
+            padding: 40px 20px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .lead { color: #6e6e73; font-size: 1rem; margin-bottom: 32px; }
+        h2 { font-size: 1.25rem; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
+        p, li { font-size: 1rem; margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 12px; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.9em;
+            background: #f5f5f7;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+        .contact-card {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5f7;
+            border-radius: 12px;
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #d2d2d7;
+            color: #6e6e73;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sayz Support</h1>
+        <p class="lead">Need a hand? Start here.</p>
+
+        <h2>Quick troubleshooting</h2>
+        <ul>
+            <li><strong>Nothing happens when I hold the hotkey.</strong> Open <strong>Settings &rarr; Hotkey</strong> and confirm a hotkey is bound and not shadowed by another app. The default is <code>&#8963;&#8997; Space</code>.</li>
+            <li><strong>Sayz can't hear me.</strong> Check <strong>System Settings &rarr; Privacy &amp; Security &rarr; Microphone</strong> and make sure Sayz is allowed. Then re-launch Sayz. You can also pick a specific input device in <strong>Settings &rarr; General</strong>.</li>
+            <li><strong>The transcription appears in the Scratchpad but not in my other app.</strong> The Mac App Store build is intentionally scratchpad+clipboard only &mdash; paste it where you need with &#8984;V. The direct-distribution build can additionally insert at the cursor; if it's installed, grant Accessibility access in <strong>System Settings &rarr; Privacy &amp; Security &rarr; Accessibility</strong>.</li>
+            <li><strong>Model download stuck or failed.</strong> Sayz verifies each model file against Hugging Face's published SHA-256s. If a file fails verification, the model is deleted and you can re-download from <strong>Settings &rarr; Model</strong>. Make sure you have at least 250 MB free for the Small model.</li>
+            <li><strong>Transcription quality is poor.</strong> Try the Small model (M3/M4 recommended) instead of Tiny or Base. Add domain-specific terms in <strong>Settings &rarr; Vocabulary</strong>; the substitutions run before the text is inserted.</li>
+        </ul>
+
+        <h2>Reporting a bug</h2>
+        <p>Diagnostic logs are stored locally on your Mac. To share them when reporting an issue:</p>
+        <ol style="padding-left: 24px; margin-bottom: 12px;">
+            <li>Open Sayz &rarr; <strong>Settings &rarr; Diagnostics</strong>.</li>
+            <li>Click <strong>Copy Logs</strong>.</li>
+            <li>Paste them into your email.</li>
+        </ol>
+        <p>Logs never leave your Mac unless you explicitly copy and send them.</p>
+
+        <h2>System requirements</h2>
+        <ul>
+            <li>macOS 14 or later</li>
+            <li>Apple Silicon (M1 or newer)</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <div class="contact-card">
+            <p>Email: <a href="mailto:zschwartz96@outlook.com">zschwartz96@outlook.com</a></p>
+            <p style="margin-bottom: 0;">Please include your macOS version, Sayz version (Settings &rarr; About), and your copied diagnostics if reporting a problem.</p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Zach Schwartz. Sayz is a macOS dictation utility.
+            &middot; <a href="privacy-policy.html">Privacy</a>
+        </div>
+    </div>
+</body>
+</html>
